@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Naufal - Backend Developer</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #060608;
+            color: #f5f5f5;
+            font-family: sans-serif;
+            overflow-x: hidden;
+            position: relative;
+        }
+        .glow-text {
+            text-shadow: 0 0 25px rgba(239, 68, 68, 0.7);
+        }
+        /* Tambahan Background Ambient Glow seperti di video */
+        .ambient-glow {
+            position: fixed;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            overflow: hidden;
+            z-index: -1;
+        }
+        .glow-sphere-1 {
+            position: absolute;
+            top: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 350px;
+            height: 350px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.2) 0%, rgba(37, 99, 235, 0.1) 50%, transparent 80%);
+            filter: blur(70px);
+        }
+        .glow-sphere-2 {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 450px;
+            height: 450px;
+            background: radial-gradient(circle, rgba(239, 68, 68, 0.15) 0%, rgba(147, 51, 234, 0.08) 60%, transparent 90%);
+            filter: blur(90px);
+        }
+    </style>
+</head>
+<body class="min-h-screen flex flex-col items-center justify-between p-6">
+
+    <!-- Efek Background Ambient Lighting -->
+    <div class="ambient-glow">
+        <div class="glow-sphere-1"></div>
+        <div class="glow-sphere-2"></div>
+    </div>
+
+    <!-- Header / Navigasi -->
+    <header class="w-full max-w-md flex justify-between items-center py-4 border-b border-zinc-800" data-aos="fade-down" data-aos-duration="800">
+        <div class="flex items-center space-x-2">
+            <span class="bg-red-600 text-white font-bold px-2.5 py-1 rounded text-sm shadow-lg shadow-red-600/30">N</span>
+            <span class="text-sm tracking-wider font-semibold">naufal.dev</span>
+        </div>
+        <div class="text-xs text-zinc-400">Instagram</div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="w-full max-w-md my-8 space-y-12">
+        
+        <!-- Hero Section -->
+        <section class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-xs tracking-widest text-zinc-400 uppercase">Hello, I am</p>
+            <h1 class="text-5xl font-extrabold tracking-tight text-red-500 glow-text">
+                Backend <br>Developer
+            </h1>
+            <p class="text-sm text-zinc-300 leading-relaxed">
+                Seorang siswa <strong class="text-white">Rekayasa Perangkat Lunak</strong> yang sedang membangun fondasi backend melalui Laravel, REST API, dan database.
+            </p>
+        </section>
+
+        <!-- Profile Card / Foto dengan efek animasi zoom & hover -->
+        <section class="bg-zinc-900/90 backdrop-blur-md border border-zinc-800 p-4 rounded-2xl shadow-2xl relative transition-transform duration-500 hover:scale-[1.02]" data-aos="zoom-in" data-aos-duration="1000">
+            <div class="bg-zinc-800 h-64 rounded-xl flex items-center justify-center overflow-hidden mb-4 relative">
+                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=500&q=80" alt="Foto Naufal" class="w-full h-full object-cover transition-transform duration-700 hover:scale-110">
+            </div>
+            <div class="text-center">
+                <h3 class="font-bold text-lg">Naufal</h3>
+                <p class="text-xs text-zinc-400">SMKN 3 SEKAYU</p>
+            </div>
+        </section>
+
+        <!-- About Me Section -->
+        <section class="space-y-4" data-aos="fade-up" data-aos-duration="1000">
+            <span class="text-xs text-red-500 font-mono">01 / ABOUT ME</span>
+            <h2 class="text-3xl font-bold">Muhammad Hibatullah Naufal</h2>
+            <p class="text-sm text-zinc-300 leading-relaxed">
+                Saya adalah siswa SMK yang tertarik pada cara kerja sistem di balik layar—bagaimana data masuk, diproses, diamankan, dan dikembalikan menjadi respons yang berguna.
+            </p>
+            <div class="bg-zinc-900/80 backdrop-blur-sm border-l-2 border-red-500 p-4 rounded-r-lg text-xs italic text-zinc-400">
+                "Yang saya kejar bukan sekadar kode yang berjalan, tetapi alur yang benar-benar saya pahami."
+            </div>
+            
+            <div class="flex gap-4 pt-2">
+                <a href="#" class="bg-white text-black text-xs font-semibold px-4 py-2.5 rounded-full hover:bg-zinc-200 transition-all duration-300 transform hover:-translate-y-0.5 shadow-md">Download CV ↗</a>
+                <a href="#projects" class="border border-zinc-700 text-xs font-semibold px-4 py-2.5 rounded-full hover:bg-zinc-800 transition-all duration-300">View Projects ↗</a>
+            </div>
+        </section>
+
+        <!-- Stats / Metrics -->
+        <section class="grid grid-cols-2 gap-4 pt-4" data-aos="fade-up" data-aos-duration="1000">
+            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 p-4 rounded-xl transition hover:border-red-500/50">
+                <h3 class="text-2xl font-bold text-red-500">2+</h3>
+                <p class="text-xs text-zinc-400 mt-1">Featured Projects</p>
+            </div>
+            <div class="bg-zinc-900/50 backdrop-blur-sm border border-zinc-800 p-4 rounded-xl transition hover:border-red-500/50">
+                <h3 class="text-2xl font-bold text-red-500">8+</h3>
+                <p class="text-xs text-zinc-400 mt-1">Core Technologies</p>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="w-full max-w-md text-center py-6 border-t border-zinc-800 text-xs text-zinc-500" data-aos="fade" data-aos-duration="1000">
+        BACKEND PORTFOLIO &copy; 2026 Naufal
+    </footer>
+
+    <!-- Script AOS untuk Animasi Scroll -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true // Animasi hanya berjalan sekali saat discroll
+        });
+    </script>
+</body>
+</html>
